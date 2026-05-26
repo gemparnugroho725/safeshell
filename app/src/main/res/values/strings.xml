@@ -1,0 +1,4 @@
+﻿<resources>
+    <string name="app_name">Safe Launcher</string>
+    <string name="app_count_format">%1$d aplikasi ditemukan</string>
+</resources>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F6FF"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ganti PIN"
+        android:textColor="#0F172A"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Masukkan PIN lama dan PIN baru."
+        android:textColor="#475569"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/currentPinInput"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:background="#EEF3FF"
+        android:hint="PIN saat ini"
+        android:inputType="numberPassword"
+        android:maxLength="4"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="#0F172A"
+        android:textColorHint="#6B7A90" />
+
+    <EditText
+        android:id="@+id/newPinInput"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="#EEF3FF"
+        android:hint="PIN baru (4 digit)"
+        android:inputType="numberPassword"
+        android:maxLength="4"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="#0F172A"
+        android:textColorHint="#6B7A90" />
+
+    <EditText
+        android:id="@+id/confirmPinInput"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="#EEF3FF"
+        android:hint="Konfirmasi PIN baru"
+        android:inputType="numberPassword"
+        android:maxLength="4"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="#0F172A"
+        android:textColorHint="#6B7A90" />
+
+    <Button
+        android:id="@+id/savePinButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:text="Simpan PIN"
+        android:textAllCaps="false" />
+
+</LinearLayout>

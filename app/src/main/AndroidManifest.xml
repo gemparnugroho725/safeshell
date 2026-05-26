@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".SafeLauncherApp"
+        android:allowBackup="true"
+        android:icon="@android:drawable/sym_def_app_icon"
+        android:label="Safe Launcher"
+        android:roundIcon="@android:drawable/sym_def_app_icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SafeLauncher">
+        <activity
+            android:name=".AppRulesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChangePinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WallpaperPickerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HiddenAppsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeEntryActivity"
+            android:clearTaskOnLaunch="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".FakeScreenActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true" />
+
+        <activity
+            android:name=".RealScreenActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true" />
+
+        <activity
+            android:name=".LockScreenActivity"
+            android:clearTaskOnLaunch="true"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true"
+            android:excludeFromRecents="true"
+            android:noHistory="true" />
+    </application>
+
+</manifest>
