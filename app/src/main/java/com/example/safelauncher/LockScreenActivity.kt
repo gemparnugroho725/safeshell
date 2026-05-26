@@ -79,13 +79,9 @@ class LockScreenActivity : BaseSecureActivity() {
         if (inputBuffer.toString() == AppRulesStore.getLockPin(this)) {
             failedAttempts = 0
             AppRulesStore.setLockRequired(this, false)
-            val target = if (AppRulesStore.getLastScreen(this) == AppRulesStore.SCREEN_FAKE) {
-                FakeScreenActivity::class.java
-            } else {
-                RealScreenActivity::class.java
-            }
+            AppRulesStore.saveLastScreen(this, AppRulesStore.SCREEN_REAL)
             startActivity(
-                Intent(this, target).apply {
+                Intent(this, RealScreenActivity::class.java).apply {
                     addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                 }
             )
